@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="homeScreen" class="home-screen">
+            <div class="banner">
+                <h1>EAT IT ALL</h1>
+            </div>
+            <div class="difficulty-selection">
+                <h2>Select Difficulty</h2>
+                <div class="difficulty-buttons">
+                    <button id="easyButton" class="difficulty-btn">Easy</button>
+                    <button id="mediumButton" class="difficulty-btn">Medium</button>
+                    <button id="hardButton" class="difficulty-btn">Hard</button>
+                </div>
+            </div>
+            <button id="helpButton" class="help-btn">?</button>
+            <div id="instructionsPopup" class="instructions-popup">
+                <div class="popup-content">
+                    <span class="close-popup">&times;</span>
+                    <h3>How to Play:</h3>
+                    <p>Use the arrow keys to move the snake.</p>
+                    <p>Eat the food to grow and earn points.</p>
+                    <p>Avoid hitting the walls or yourself!</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="gameScreen" class="game-screen" style="display: none;">
+            <h1>Snake Game</h1>
+            <div class="game-container">
+                <canvas id="gameCanvas" width="400" height="400"></canvas>
+                <div class="score-container">
+                    <p>Score: <span id="score">0</span></p>
+                </div>
+                <div id="gameOver" class="game-over">
+                    <h2>Game Over!</h2>
+                    <p>Your final score: <span id="finalScore">0</span></p>
+                    <button id="restartButton">Play Again</button>
+                    <button id="homeButton">Go to Home</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
